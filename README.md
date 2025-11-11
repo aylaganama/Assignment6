@@ -12,20 +12,20 @@
   ```bash
   mvn test
 
-**GitHub Repository:** [https://github.com/aylaganama/Assignment6](https://github.com/aylaganama/Assignment6)
-
 **Recordings:**
 - Tests are configured to record to the `videos/` directory.
 - Resolution: **1280×720**
 
-**Summary:**
-- **Traditional flow:** Validated product search, navigation, and purchase flow.
-- **LLM flow:** Implemented the same logic using AI-assisted code generation.
-- **Visual flow:** Created baseline screenshots and confirmed visual consistency between runs.
-
 **Reflection:**
-- **Manual UI testing:** Effort, reliability, flakiness handling, selector strategy, and maintenance.
-- **AI-assisted testing:** Speed of authoring, accuracy of generated selectors, fixes required, and limitations.
-- **Visual testing:** Benefits for layout regression and design consistency.
-- **Failures:** What failed most often and why (e.g., timing or dynamic content).
-- **Final verdict:** When to prefer manual vs AI-assisted vs visual regression testing.
+The manual UI testing approach using Playwright and Java required more time and attention to detail.
+Writing selectors, managing timing issues, and maintaining assertions manually gave full control over each step
+but was tedious. It was also more reliable once stabilized, since every action and expectation was explicitly coded.
+
+The AI-assisted UI testing with Playwright MCP was faster to generate and easier to start with.
+The agent produced runnable test code that covered most steps correctly, but the generated selectors sometimes broke
+or missed dynamic elements, which required manual fixes.
+
+In terms of maintenance, the manual tests are easier to debug and update when the website changes,
+while the AI-generated tests may need regeneration from scratch.
+Overall, the manual method proved more dependable, while the AI-assisted one showed strong potential
+for speeding up test creation but still needs refinement for complex or dynamic UIs.
